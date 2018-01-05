@@ -6,8 +6,8 @@ a = []
 COMPUTER = 'X'
 USER = 'O'
 TIE = ' '
+#pdb.set_trace()
 
-#symbols = ['X', 'O']
 class rowColumnCheck():
     def isGameOver(self, table, xPos, yPos):
         pos = table[xPos][yPos]
@@ -35,7 +35,6 @@ class backDiagonalCheck():
     def isGameOver(self, table, xPos, yPos):
         pos = table[xPos][yPos]
         #print("backDiagonalCheck")
-        #pdb.set_trace()
         Count = 0
         for i in range (len(table)):
             if table[i][i].getSymbol() == pos.getSymbol():
@@ -138,11 +137,6 @@ while True:
     
 max_attempts = (size * size) // 2
 max_row_sep = (2 * size) + 1
-
-##for i in range(size):
-##    for j in range(size):
-##        index = random.randint(0, 2)
-##        a[i].append(symbols[index])
 
 for i in range(size):
     a.append([])
